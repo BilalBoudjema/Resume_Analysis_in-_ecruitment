@@ -47,7 +47,7 @@ The system follows a forward-chaining approach to apply rules sequentially and d
 ## 📌 How to Run the Project
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/yourusername/cv-analysis-expert-system.git](https://github.com/BilalBoudjema/Resume_Analysis_in-_ecruitment)
+   git clone https://github.com/BilalBoudjema/Resume_Analysis_in-_ecruitment
    cd cv-analysis-expert-system
    ```
 
