@@ -51,7 +51,7 @@ The system follows a forward-chaining approach to apply rules sequentially and d
    cd cv-analysis-expert-system
    ```
 
-2. Ensure you have Rstudio installed.
+2. Ensure you have Prolog installed.
 3. Load the file
 4. Run the file 
  
