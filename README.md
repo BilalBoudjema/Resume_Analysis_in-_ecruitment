@@ -1,68 +1,95 @@
-# 📄 CV Analysis Expert System
+📄 CV Analysis Expert System
+This repository contains a project developed as part of the Knowledge Representation module during the Master 1 Computer Science program at Sorbonne Paris Nord University (2022/2023 academic year).
 
-This repository contains the project developed as part of the **Knowledge Representation** module during the **Master 1 Computer Science** program at **Sorbonne Paris Nord University** (2022/2023 academic year).
+📚 Project Overview
+The goal of this project is to design an Expert System capable of analyzing resumes (CVs) and assisting recruiters in evaluating candidates for software development positions. The system models knowledge using rules and facts to determine whether a candidate qualifies for an interview.
 
-## 📚 Project Overview
-The objective of this project is to design an **Expert System** to analyze resumes (CVs) and assist recruiters in evaluating candidates for software development positions. The system models knowledge using rules and facts to determine whether a candidate is eligible for an interview.
+📊 Knowledge Domain
+The system focuses on the recruitment process in the software development field. Key evaluation criteria include:
 
+Educational level (Bachelor's, Master's degree, etc.)
+Technical skills (programming languages, frameworks)
+Work experience (including open-source projects)
+Certifications (Google, Microsoft, etc.)
+Soft skills (communication, teamwork)
+Geographical location (proximity to the company)
+📥 Knowledge Acquisition
+We conducted interviews with an HR manager from a software development company to gather relevant insights. Key findings include:
 
-## 📊 Knowledge Domain
-We focus on the **recruitment process** in the **software development** field. Key evaluation criteria include:
+The importance of aligning CV content with job requirements.
+The added value of recognized certifications (Google, Microsoft, etc.).
+A preference for candidates with at least 2 years of experience.
+The influence of geographical location and personal interests.
+The significance of a well-structured and complete CV.
+🔍 Knowledge Modeling
+The system relies on if-then rules for decision-making. Here are some examples:
 
-- Educational level (e.g., Bachelor's, Master's degree)
-- Technical skills (programming languages, frameworks)
-- Work experience (including open-source projects)
-- Certifications (e.g., Google, Microsoft)
-- Soft skills (communication, teamwork)
-- Candidate location (proximity to the company)
+R1 : If required fields are missing, display an error message.
+R4 : If the candidate lacks the required skills and the CV is not properly formatted, reject the application.
+R8 : If the candidate meets all criteria (skills, experience, language, location, interests), schedule an interview.
+📐 Knowledge Representation
+The system uses a rule-based approach, where rules and facts define the decision-making process:
 
-## 📥 Knowledge Acquisition
-We conducted interviews with an HR manager from a software development company. Key insights include:
+plaintext
+Copy
+1
+2
+3
+R1: IF missing_required_fields THEN display_error_message
+R2: IF candidate_has_account AND cv_present AND job_offer_exists THEN allow_application
+R8: IF candidate_meets_all_criteria THEN contact_for_interview
+🧠 Expert System Reasoning
+The system employs a forward-chaining approach to sequentially apply rules and determine whether a candidate should be accepted or rejected.
 
-- Importance of matching CV contents with job requirements
-- Value of certifications (e.g., Google, Microsoft)
-- Preference for candidates with at least **2 years** of experience
-- The influence of candidate location and personal interests
-- The importance of a well-structured CV
+📌 How to Run the Project
+Clone the Repository
+bash
+Copy
+1
+2
+git clone https://github.com/yourusername/cv-analysis-expert-system.git
+cd cv-analysis-expert-system
+Install SWI-Prolog
+Windows : Download and install from SWI-Prolog .
+macOS : Install via Homebrew:
+bash
+Copy
+1
+brew install swi-prolog
+Linux (Ubuntu/Debian) :
+bash
+Copy
+1
+2
+sudo apt update
+sudo apt install swi-prolog
+Run the Expert System
+Save the Prolog code in a file named programme.pl.
+Launch SWI-Prolog:
+bash
+Copy
+1
+swipl
+Load the Prolog file:
+prolog
+Copy
+1
+?- [programme].
+Test the rules and facts with queries:
+prolog
+Copy
+1
+?- suitable_for_position(alice, software_developer).
+Exit SWI-Prolog:
+prolog
+Copy
+1
+?- halt.
+📝 Conclusion
+This project enhanced our understanding of knowledge representation and expert systems. It also helped us develop skills in collaboration, deadline management, and problem-solving.
 
-## 🔍 Knowledge Modeling
-The system is based on **if-then** rules for decision-making. Examples:
-
-- **R1**: If a candidate does not fill in required fields, display an error message.
-- **R4**: If the candidate lacks required skills and does not follow the CV format, reject the application.
-- **R8**: If the candidate meets all job criteria (skills, experience, language, location, interests), schedule an interview.
-
-## 📐 Knowledge Representation
-The system uses a **rule-based** approach, with rules and facts defining the decision process:
-
-```plaintext
-R1: IF missing required fields THEN show error message
-R2: IF candidate has an account AND a CV AND job offer exists THEN allow application
-R8: IF candidate meets all requirements THEN contact for an interview
-```
-
-## 🧠 Expert System Reasoning
-The system follows a forward-chaining approach to apply rules sequentially and determine whether to accept or reject a candidate.
-
-## 📌 How to Run the Project
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/BilalBoudjema/Resume_Analysis_in-_ecruitment
-   cd cv-analysis-expert-system
-   ```
-
-2. Ensure you have Prolog installed.
-3. Load the file
-4. Run the file 
- 
-
-## 📝 Conclusion
-This project enhanced our understanding of knowledge representation and expert systems. It also strengthened our ability to collaborate, meet deadlines, and manage challenges effectively.
-
-## 📖 References
-- [Effective Recruitment Process](http://bit.ly/3SkVZpw)
-- [IT Recruitment Challenges](http://bit.ly/3So8FMk)
-- [Tech Industry Trends](http://bit.ly/3EvuNyH)
-- [IT Recruitment in 2022](http://bit.ly/3XV8wRI)
-
-
+📖 References
+Effective Recruitment Process
+IT Recruitment Challenges
+Tech Industry Trends
+IT Recruitment in 2022
