@@ -54,8 +54,8 @@ The system uses a forward chaining approach to sequentially apply the rules and 
 1. **Clone the repository**
 
     ```bash
-    git clone [https://github.com/yourusername/cv-analysis-expert-system.git](https://github.com/yourusername/cv-analysis-expert-system.git)
-    cd cv-analysis-expert-system
+    git clone https://github.com/BilalBoudjema/Resume_Analysis_in_Recruitment
+    cd Resume_Analysis_in_Recruitment
     ```
 
 2. **Install SWI-Prolog**
